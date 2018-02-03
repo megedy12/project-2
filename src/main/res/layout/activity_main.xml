@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.android.scorecounter.MainActivity"
-    android:background="@drawable/football_pitch1">
+    android:background="@drawable/football_pitch1"
+    tools:context="com.example.android.scorecounter.MainActivity">
 
     <Button
-        android:background="@android:color/white"
-        android:onClick="resetFunction"
         android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
+        android:background="@android:color/white"
+        android:onClick="resetFunction"
         android:text="reset" />
 
     <LinearLayout
@@ -33,10 +33,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="75dp"
                 android:layout_marginTop="16dp"
+                android:adjustViewBounds="false"
+                android:cropToPadding="false"
                 android:src="@drawable/realmadrid_logo" />
 
             <TextView
-               android:id="@+id/leftteam_goal_textview"
+                android:id="@+id/leftteam_goal_textview"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -108,33 +110,32 @@
 
             <Button
 
-                android:background="@android:color/holo_green_dark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Goal"
-                android:padding="16dp"
+                android:background="@android:color/holo_green_dark"
                 android:onClick="leftSideGoalIncrement"
-                />
+                android:padding="16dp"
+                android:text="@string/goal_button" />
 
             <Button
-                android:onClick="leftSideYellowCardIncrement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="22dp"
-                android:text="Yellow card"
+                android:background="#FFEB3B"
+                android:onClick="leftSideYellowCardIncrement"
                 android:padding="16dp"
-                android:background="#FFEB3B"/>
+                android:text="@string/yellowCard_button" />
 
             <Button
-                android:onClick="leftSideRedCardIncrement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Red card"
+                android:background="@android:color/holo_red_dark"
+                android:onClick="leftSideRedCardIncrement"
                 android:padding="16dp"
-                android:background="@android:color/holo_red_dark"/>
+                android:text="@string/recdCard_button" />
 
         </LinearLayout>
 
@@ -154,8 +155,9 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="96dp"
                 android:layout_height="75dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/barcelona_logo" />
 
@@ -232,32 +234,32 @@
 
             <Button
 
-                android:onClick="rightSideGoalIncrement"
-                android:background="@android:color/holo_green_dark"
-                android:padding="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Goal" />
+                android:background="@android:color/holo_green_dark"
+                android:onClick="rightSideGoalIncrement"
+                android:padding="16dp"
+                android:text="@string/goal_button" />
 
             <Button
-                android:onClick="rightSideYellowCardIncrement"
-                android:background="#FFEB3B"
-                android:padding="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="22dp"
-                android:text="Yellow card" />
+                android:background="#FFEB3B"
+                android:onClick="rightSideYellowCardIncrement"
+                android:padding="16dp"
+                android:text="@string/yellowCard_button" />
 
             <Button
-                android:onClick="rightSideRedCardIncrement"
-                android:background="@android:color/holo_red_dark"
-                android:padding="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="Red card" />
+                android:background="@android:color/holo_red_dark"
+                android:onClick="rightSideRedCardIncrement"
+                android:padding="16dp"
+                android:text="@string/recdCard_button" />
 
         </LinearLayout>
 
